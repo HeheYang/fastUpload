@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="fastUpload.domain.mapper.PerFileMapper" >
+  <resultMap id="BaseResultMap" type="fastUpload.domain.model.Perfile" >
+    <id column="perfile_id" property="perFileId" jdbcType="VARCHAR" />
+    <result column="perfile_size" property="perFileSize" jdbcType="BIGINT" />
+    <result column="perfile_name" property="perFileName" jdbcType="VARCHAR" />
+    <result column="perfile_url" property="perFileUrl" jdbcType="VARCHAR" />
+    <result column="perfile_md5" property="perFileMd5" jdbcType="VARCHAR" />
+    <result column="perfile_chuck" property="perFileChuck" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    perfile_id,perfile_name,perfile_url, perfile_md5, perfile_chuck
+  </sql>
+
+  <insert id="insert" parameterType="fastUpload.domain.model.Perfile" >
+    insert into perfile (perfile_id,perfile_name, perfile_url,
+    perfile_md5, perfile_chuck,perfile_size)
+    values (#{perFileId},#{perFileName},#{perFileUrl},#{perFileMd5},#{perFileChuck},#{perFileSize})
+  </insert>
+
+  <select id="getPerfileList" parameterType="string" resultMap="BaseResultMap">
+    select perfile_chuck from perfile
+    where perfile_md5=#{FileMd5}
+  </select>
+
+
+  <select id="getPerfile" parameterType="string" resultType="string">
+    select perfile.perfile_chuck from perfile
+    where perfile.perfile_md5=#{FileMD5}
+  </select>
+
+  <delete id="deletePerFile" parameterType="string">
+   delete from perfile
+   where perfile.perfile_md5=#{perFileMD5}
+  </delete>
+
+  <select id="isAllParts" parameterType="string" resultType="int">
+    SELECT COUNT(*) from perfile
+    where perfile_md5=#{FileMD5}
+  </select>
+  </mapper>

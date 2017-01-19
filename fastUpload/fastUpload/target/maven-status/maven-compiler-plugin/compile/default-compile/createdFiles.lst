@@ -1,0 +1,16 @@
+fastUpload\domain\mapper\PerFileMapper.class
+fastUpload\domain\model\File.class
+fastUpload\util\UploadProperties.class
+fastUpload\domain\mapper\FileMapper.class
+fastUpload\UploadService\Impl\PerfFileServiceImpl.class
+fastUpload\util\MyBatisConfig.class
+fastUpload\UploadController\UploadController.class
+fastUpload\UploadService\PerFileService.class
+fastUpload\util\MD5Utils.class
+fastUpload\UploadService\Impl\FileServiceImpl.class
+fastUpload\FastUploadApplication$1.class
+fastUpload\UploadService\FileService.class
+fastUpload\util\BizResponse.class
+fastUpload\domain\model\Perfile.class
+fastUpload\util\MyBatisMapperScannerConfig.class
+fastUpload\FastUploadApplication.class

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+<title>主页</title>
+<!-- Bootstrap core CSS -->
+<link href="../plug-in/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="../plug-in/bootstrapDialog/css/bootstrap-dialog.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="../plug-in/webuploader/webuploader.css">
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="../plug-in/ie/js/ie-emulation-modes-warning.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+		<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+	<div id="main-content-upload" class="_hide">
+		<div id="uploader">
+				<button id="my-upload"> go </button>
+			<div class="btns">
+				<div id="picker" class="btn btn-default" style="float: right;">选择文件</div>
+				<button id="ctlBtn" class="btn btn-primary" style="float: right;">开始上传</button>
+			</div>
+			<div>
+				<table class="table table-hover" style="table-layout: fixed;">
+					<thead>
+						<tr>
+							<th>文件名</th>
+							<th>进度</th>
+							<th>速度</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody id="thelist">
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="../plug-in/jquery/js/jquery.min.js"></script>
+	<script src="../plug-in/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../plug-in/bootstrapDialog/js/bootstrap-dialog.min.js"></script>
+	<script src="../plug-in/webuploader/webuploader.js"></script>
+	<!-- <script src="../js/plug-in/docs.min.js"></script> -->
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../plug-in/ie/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="./fileupload.js"></script>
+	<script>
+		
+	WebUploaderInit();
+	</script>
+
+</body>
+</html>
